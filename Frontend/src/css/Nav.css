@@ -1,0 +1,147 @@
+/* General Navbar Styling */
+#nav-shell {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+#nav-container {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items with space between them */
+}
+
+/* Coffee Main Logo */
+#coffee-main-logo {
+    width: 65px; /* Adjust as needed */
+    height: 65px; /* Adjust as needed */
+    object-fit: cover;
+    border: 2px solid #010101;
+    padding: 1.5px 1px 1px 1px ;
+    margin: 0% 0% 0% 20%;
+}
+
+/* Adjustments for Search Input (assuming SearchInput handles its own internal styling) */
+/* This ensures SearchInput component is centered or aligned as needed */
+.d-flex.justify-content-center.justify-content-lg-start {
+    /* Specific styling for the search input container */
+    padding: 0 10px; /* Add some horizontal padding */
+}
+
+/* Navbar Collapse - Controls visibility on different screen sizes */
+#basic-navbar-nav {
+    flex-grow: 1; /* Allow it to grow and take available space */
+}
+
+/* Navigation Buttons Styling */
+#Nav-clear-cart{
+    background-color: #498050;
+    border-color: #498050;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-left: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#Nav-Add-Item,
+#Nav-Print {
+    background-color: #498050; /* Green button color */
+    border-color: #498050;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#Nav-clear-cart:hover,
+#Nav-Add-Item:hover,
+#Nav-Print:hover {
+    background-color: #3b6640; /* Darker green on hover */
+    border-color: #3b6640;
+}
+
+/* User Profile Button */
+.btn.p-2 {
+    width: 40px;
+    height: 40px;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #000000; /* Orange border */
+    color: #3b6640; /* Orange icon color */
+    font-size: 1.5rem; /* Larger icon size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.p-2:hover {
+    background-color: #3b6640; /* Orange background on hover */
+    color: #ffffff; /* White icon on hover */
+}
+
+/* Refresh, Envelope, Bell Buttons */
+#Nav-Refresh {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem; /* Larger icon size */
+    padding: 5px;
+    margin: 0px 5px;
+    transition: color 0.3s ease;
+}
+
+
+/* Ensure buttons take full width on small screens and are spaced well on larger screens */
+.navbar-collapse .row > .col {
+    display: flex;
+    justify-content: center; /* Center content within columns */
+}
+
+/* Responsive Adjustments */
+/* For medium and larger screens, ensure proper spacing and alignment */
+@media (min-width: 768px) {
+    #nav-container {
+        padding: 0 20px; /* More padding on larger screens */
+    }
+
+    /* Adjust button width on medium and larger screens */
+    #Nav-clear-cart,
+    #Nav-Add-Item,
+    #Nav-Print {
+        width: auto !important; /* Override w-100 on smaller screens */
+        min-width: 120px; /* Ensure a minimum width */
+    }
+
+    /* Adjust spacing for the last group of icons */
+    .d-flex.justify-content-around {
+        gap: 10px; /* Add gap between icon buttons */
+    }
+}
+
+/* For small screens (mobile), stack elements vertically */
+@media (max-width: 991.98px) {
+    #basic-navbar-nav {
+        text-align: center;
+        margin-top: 10px; /* Add some space when collapsed */
+    }
+
+    .navbar-collapse .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items in the column */
+    }
+
+    .navbar-collapse .row > .col {
+        margin-bottom: 10px; /* Space between stacked elements */
+    }
+
+    #Nav-clear-cart,
+    #Nav-Add-Item,
+    #Nav-Print {
+        width: 80% !important; /* Make buttons wider on small screens */
+    }
+}
+
+/* General button styling for consistency */
+.btn {
+    white-space: nowrap; /* Prevent text wrapping inside buttons */
+}
