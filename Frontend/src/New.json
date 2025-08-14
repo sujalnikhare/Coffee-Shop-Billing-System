@@ -1,0 +1,20 @@
+{
+  "_id": {
+    "$oid": "682dc37f6ba68fa5e79204e2"
+  },
+  "Name": "Anil",
+  "Age": "23",
+  "Address": [
+    {
+      "CA": "Nagpur",
+      "PA": "Pune"
+    }
+  ],
+  "Contact": [
+    {-
+      "Mobile": "7709553661",
+      "Email": "sujal@gmail.com"
+    }
+  ],
+  "Position": "Developer"
+}
